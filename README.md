@@ -20,6 +20,7 @@ This project critically evaluates 11 widely-used deep learning benchmark dataset
 - **Traffic** - Road traffic data
 - **Weather** - Weather measurements
 - **ILI** - Influenza-Like Illness surveillance
+- **Bitcoin** - Price data
 
 ## DQEF Framework
 
