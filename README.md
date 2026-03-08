@@ -10,7 +10,7 @@
 
 ## Overview
 
-This project critically evaluates 9 widely-used deep learning benchmark datasets for time series forecasting. The goal is to determine which datasets are actually good quality and representative, and whether dataset quality impacts forecasting model performance.
+This project critically evaluates 11 widely-used deep learning benchmark datasets for time series forecasting. The goal is to determine which datasets are actually good quality and representative, and whether dataset quality impacts forecasting model performance.
 
 ## Datasets Analyzed
 
