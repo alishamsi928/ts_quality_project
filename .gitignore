@@ -12,7 +12,6 @@ ENV/
 .ipynb_checkpoints
 
 # Data files (too large for git)
-data/
 !requirements.txt
 
 # OS
