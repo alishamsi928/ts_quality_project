@@ -1,0 +1,12 @@
+Dataset,Rows,Columns,Missing (%),Duplicates (%)
+air_quality.csv,9357,15,0.0,0.0
+bitcoin.csv,4094,11,45.45,0.0
+electricity.csv,26304,322,0.0,0.0
+ETTh1.csv,17420,8,0.0,0.0
+ETTh2.csv,17420,8,0.0,0.0
+ETTm1.csv,69680,8,0.0,0.0
+ETTm2.csv,69680,8,0.0,0.0
+exchange_rate.csv,7588,9,0.0,0.0
+national_illness.csv,1481,15,0.0,0.0
+traffic.csv,17544,863,0.0,0.0
+weather.csv,52696,22,0.0,0.0
