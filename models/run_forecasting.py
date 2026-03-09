@@ -21,7 +21,6 @@ try:
     print(f"CUDA available: {torch.cuda.is_available()}")
     if torch.cuda.is_available():
         print(f"GPU: {torch.cuda.get_device_name(0)}")
-        print(f"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB")
     print("="*60 + "\n")
     
 except ImportError:
@@ -144,7 +143,7 @@ if PYTORCH_AVAILABLE:
     
     
     class DLinearForecaster:
-        """DLinear Wrapper - MEMORY OPTIMIZED"""
+        
         def __init__(self, lookback=96, horizon=96, kernel_size=25):
             self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
             self.model = DLinearPyTorch(lookback, horizon, kernel_size)
@@ -262,7 +261,7 @@ os.makedirs(results_folder, exist_ok=True)
 
 files = sorted([f for f in os.listdir(data_folder) if f.endswith('.csv')])
 print(f"Found {len(files)} datasets")
-print(f"Using {'PyTorch GPU (Memory Optimized)' if PYTORCH_AVAILABLE else 'NumPy fallback'}\n")
+print(f"Using {'PyTorch GPU' if PYTORCH_AVAILABLE else 'fallback'}\n")
 
 all_results = []
 
@@ -406,7 +405,7 @@ if all_results:
         if mae_col in df_results.columns:
             print(f"{model:8} - Avg MAE: {df_results[mae_col].mean():.4f}, Avg R²: {df_results[r2_col].mean():.4f}")
     
-    print(f"\n✅ Saved to: {output_file}")
+    print(f"\n Saved to: {output_file}")
     print("="*60)
 else:
     print(" No results generated")

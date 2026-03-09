@@ -248,13 +248,8 @@ if __name__ == "__main__":
         
         # GPU test
         x = torch.randn(10, 10).cuda()
-        print(f"\n✅ GPU is working! Test tensor device: {x.device}")
+        print(f"\n GPU is working! Test tensor device: {x.device}")
     else:
-        print("\n⚠️  GPU not detected - will use CPU")
-        print("To use GPU, install PyTorch with CUDA:")
-        print("pip install torch --index-url https://download.pytorch.org/whl/cu118")
+        print("\  GPU not detected ")
+
     
-    print("\n" + "="*60)
-    print("Ready to use! Import with:")
-    print("from lstm_pytorch import LSTMForecaster")
-    print("="*60)

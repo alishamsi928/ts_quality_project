@@ -277,19 +277,6 @@ if __name__ == "__main__":
         print(f"  PyTorch is {speedup:.1f}x faster")
     else:
         slowdown = time_pytorch / time_numpy
-        print(f"  NumPy is {slowdown:.1f}x faster (on small data, NumPy can be faster!)")
+        print(f"  NumPy is {slowdown:.1f}x faster")
     
-    print("\n" + "="*70)
-    print("RECOMMENDATION:")
-    print("="*70)
-    print("\n Both implementations are scientifically valid!")
-    print("\n Use NumPy version if:")
-    print("   - You want simplicity and transparency")
-    print("   - Your datasets are small-medium (< 100k samples)")
-    print("   - You want to save time")
-    print("\n Use PyTorch version if:")
-    print("   - You want all models in same framework")
-    print("   - You have very large datasets")
-    print("   - You want GPU acceleration")
-    print("\n HONEST TRUTH: For your project, NumPy is perfectly fine!")
-    print("="*70)
+    
