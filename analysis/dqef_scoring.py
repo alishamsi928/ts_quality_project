@@ -49,7 +49,7 @@ seasonal_lags = {
 data_folder = 'data'
 files = [f for f in os.listdir(data_folder) if f.endswith('.csv')]
 
-print("Analyzing all datasets for DQEF scoring...\n")
+print("Analyzing all datasets for DQEF scoring.\n")
 
 
 all_metrics = []
@@ -207,7 +207,7 @@ print("=" * 80)
 # Save results
 os.makedirs('results', exist_ok=True)
 df_metrics.to_csv('results/dqef_scores.csv', index=False)
-print("\n✅ Scores saved to results/dqef_scores.csv")
+print("\n Scores saved to results/dqef_scores.csv")
 
 # Bar chart
 fig, ax = plt.subplots(figsize=(12, 6))
@@ -235,6 +235,5 @@ ax.grid(axis='x', alpha=0.3)
 plt.tight_layout()
 os.makedirs('plots', exist_ok=True)
 plt.savefig('plots/dqef_rankings.png', dpi=150, bbox_inches='tight')
-print("✅ Chart saved to plots/dqef_rankings.png")
+print(" Chart saved to plots/dqef_rankings.png")
 
-print("\nDone!")

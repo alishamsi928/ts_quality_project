@@ -123,7 +123,6 @@ for name, filename in datasets.items():
         available_datasets[name] = filepath
 
 if len(available_datasets) < 2:
-    print("Need at least 2 datasets for cross-dataset testing")
     print("Available datasets:", list(available_datasets.keys()))
     exit()
 
@@ -131,7 +130,6 @@ print("="*70)
 print("CROSS-DATASET GENERALIZATION EXPERIMENT")
 print("="*70)
 print(f"\nTesting generalization across {len(available_datasets)} datasets")
-print("Strategy: Train on Dataset A → Test on Dataset B")
 print("\nDatasets:", list(available_datasets.keys()))
 print("="*70)
 
@@ -290,6 +288,3 @@ if len(cross_dataset) > 0:
     if len(cross_domain) > 0:
         print(f"  Cross-domain transfers: {cross_domain['MAE_Change_%'].mean():.1f}% drop")
 
-print("\n" + "="*70)
-print("Recommendation: Review cross_dataset_generalization.csv for detailed results")
-print("="*70)

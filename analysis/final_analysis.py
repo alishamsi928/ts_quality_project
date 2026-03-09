@@ -10,9 +10,6 @@ try:
     forecast = pd.read_csv('results/forecasting_results.csv')
 except FileNotFoundError as e:
     print(f"Error: {e}")
-    print("Make sure you've run:")
-    print("  1. dqef_scoring.py")
-    print("  2. run_forecasting_experiments.py")
     exit(1)
 
 # Merge on dataset name
@@ -41,11 +38,11 @@ for model in ['ARIMA', 'DLinear', 'LSTM']:
             print(f"  {model:10s}: r = {r:7.4f}, p = {p:.4f}", end="")
             if p < 0.05:
                 if r < -0.5:
-                    print("  → Strong negative (higher quality = lower error) ✓")
+                    print("  → Strong negative ")
                 elif r > 0.5:
-                    print("  → Strong positive (higher quality = higher error) ✗")
+                    print("  → Strong positive ")
                 else:
-                    print("  → Weak correlation")
+                    print("  → Weak correlation ")
             else:
                 print("  → Not significant")
 
@@ -111,12 +108,10 @@ if 'DLinear_MAE' in merged.columns:
         
         plt.tight_layout()
         plt.savefig('plots/quality_vs_performance.png', dpi=150, bbox_inches='tight')
-        print("\n✅ Plot saved: plots/quality_vs_performance.png")
+        print("\n Plot saved: plots/quality_vs_performance.png")
 
 # Save merged results
 merged.to_csv('results/final_analysis.csv', index=False)
 print(" Full results saved: results/final_analysis.csv")
 
-print("\n" + "="*70)
-print("ANALYSIS COMPLETE")
-print("="*70)
+
